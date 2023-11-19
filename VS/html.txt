@@ -1,0 +1,72 @@
+HTML
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="intro container">
+        <h1>Budders</h1>
+        <div class="buttons">
+        <button>Home</button>
+        <button>About Me</button>
+        <button>Contact</button>
+        </div>
+    </div>
+    <div class="intro subheader"><h2>An Aspiring Climber Dabbing with Programming</h2></div>
+    <div class="climberbg"><img src="./Rock-climbing.jpg" alt="rock climber"></div>
+    
+   
+</body>
+</html>
+
+
+
+CSS
+
+
+body {
+    margin: 0;
+}
+.intro {
+    margin-left: 1em;
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    white-space: nowrap;
+}
+.buttons {
+    margin-right: 2rem;
+    margin-left: 10px;
+}
+.intro > h1 {
+    margin-bottom: 0;
+    letter-spacing: 3px;
+}
+.intro > h2 {
+    margin-top: 0;
+    max-width: 500px;
+}
+
+.climberbg > img {
+    width: 100vw;
+    object-fit: cover;
+}
+
+@media (max-width: 400px) {
+    .container {
+        flex-direction: column;
+    }
+    
+}
