@@ -2,8 +2,11 @@ body {
     margin: 0;
     height: 100vh;
     width: 100vw;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
 }
-.intro-container {
+.banner-container {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     background-color: #DFA878;
@@ -11,14 +14,14 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     width: 100vw
 }
-.intro-container-item {
+.banner-container-item {
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 .climber-vector > img {
-    width: 230px;
+    width: 250
     
 }
 .name {
@@ -52,24 +55,144 @@ hr {
 
 .about-me {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    color: #6C3428;
+    text-align: center;
+    font-size: 30px;
 }
 .myself {
     margin-top: 50px;
     height: 200px;
     border-radius: 50%;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+p {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+.page-break {
+    width: 500px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+.life-stories {
+    margin-bottom: 75px;
+    margin-top: 50px;
+}
+
+.life > img, .life-p {
+    width: 350px;
+    object-fit: cover; 
+}
+.life > img {
+    height: 238px;
+}
+
+.life-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.future {
+    grid-column: span 2;
+}
+.life {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px soldi black;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 75px;
     
+}
+button > img {
+    height: 20px;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 50px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+button:after {
+    content: "";
+    background-color: #BA704F;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+  
+button:hover:after {
+    top: 0px;
+    left: 0px;
+}
+
+a {
+    text-decoration: none;
 }
 
 
-
-
 @media (max-width: 950px) {
-    .intro-container {
+    .banner-container {
         display: flex;
         flex-direction: column;
     }
     .programmer-vector{
         margin-top: 5px;
     }
+}
+
+@media (max-width: 600px) {
+    .life-container {
+        display: grid;
+        grid-template-columns: 1;
+    }
+    .future {
+        grid-column: span 1;
+    }
+    
 }
